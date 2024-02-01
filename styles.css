@@ -1,0 +1,108 @@
+/* Your existing styles remain unchanged */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; 
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;  
+    height: 100%;
+    overflow-y: auto; 
+}
+.main-content {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    margin-left: 200px;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column; 
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px; /* Compensate for margin-bottom added to video items */
+}
+
+
+.label {
+    background-color: #eee;
+    padding: 10px;
+
+    margin-bottom: 10px;
+}
+
+.series-container {
+    margin-bottom: 20px;
+    padding: 10px; 
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+.video-item {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-bottom: 50px; /* Increase margin to provide more space between videos */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-right: 10px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 28.125%; /* 16:9 aspect ratio (9 / 32 * 100) */
+}
+
+
+
+.video-item iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+        .video-item iframe {
+            height: 100vw;
+        }
+        .video-item {
+            padding-bottom: 30%;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .video-item {
+        padding-bottom: 14.0625%; /* Adjust the aspect ratio for larger screens */
+    }
+}
+.videos::after {
+    content: "";
+    flex: auto;
+}
