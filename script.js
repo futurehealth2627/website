@@ -1,14 +1,11 @@
-function toggleDropdown() {
-    var dropdownContent = document.getElementById("dropdownContent");
-    dropdownContent.classList.toggle("show");
-}
-
-function loadVideo(videoUrl) {
+function loadVideo(seriesIndex, videoIndex) {
     var videoPlayer = document.getElementById("videoPlayer");
+    var videoUrl = videoURLs[seriesIndex][videoIndex];
+
     videoPlayer.innerHTML = '<iframe width="560" height="315" src="' + videoUrl + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    
+
     // Close the dropdown after selecting a video
-    var dropdownContent = document.getElementById("dropdownContent");
+    var dropdownContent = document.getElementById("dropdownContent" + seriesIndex);
     dropdownContent.classList.remove("show");
 }
 
@@ -105,10 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     for (var i = 0; i < numberOfSeries; i++) {
+
         // Add series to the sidebar
-        var seriesItem = document.createElement('li');
+        var seriesItem = document.createElement('button');
         seriesItem.innerHTML = '<a href="#label' + (i + 1) + '">' + seriesNames[i] + '</a>';
         seriesList.appendChild(seriesItem);
+        seriesList.style.width = '150px';
 
         // Create a container for each series
         var seriesContainer = document.createElement('div');
@@ -140,3 +139,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
