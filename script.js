@@ -41,68 +41,34 @@ document.addEventListener('DOMContentLoaded', function () {
     // Number of series
     var numberOfSeries = seriesNames.length;
 
-    // Array of video URLs for each series
-    var videoURLs = [
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ],
-        [
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0',
-            'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0'
-        ]
+    // Array of video URLs and descriptions for each series
+    var videoData = [
+        {
+            seriesName: seriesNames[0],
+            videos: [
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1 and i want to test if this will work or not but as i see now it doesnt ' },
+
+            ]
+        },
+        {
+            seriesName: seriesNames[1],
+            videos: [
+                { url: 'https://www.youtube.com/embed/6FWEgHPMssU?si=RvZm2eyKOu7CrHh0', description: 'Description for Video 1' },
+            ]
+        },
+
     ];
 
     for (var i = 0; i < numberOfSeries; i++) {
-
         // Add series to the sidebar
         var seriesItem = document.createElement('button');
         seriesItem.innerHTML = '<a href="#label' + (i + 1) + '">' + seriesNames[i] + '</a>';
@@ -123,20 +89,21 @@ document.addEventListener('DOMContentLoaded', function () {
         seriesContainer.appendChild(label);
 
         // Add videos to the series container
-        var currentSeriesVideos = videoURLs[i];
+        var currentSeriesData = videoData.find(series => series.seriesName === seriesNames[i]);
         var videosContainer = document.createElement('div');
         videosContainer.className = 'videos';
         seriesContainer.appendChild(videosContainer);
-
-        for (var j = 0; j < currentSeriesVideos.length; j++) {
-            var videoItem = document.createElement('div');
-            videoItem.className = 'video-item';
-            videoItem.innerHTML = '<h2>Video ' + (j + 1) + '</h2>' +
-                '<iframe width="300" height="169" src="' + currentSeriesVideos[j] + '" ' +
-                'title="YouTube video player" frameborder="0" ' +
-                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-            videosContainer.appendChild(videoItem);
+        if (currentSeriesData && currentSeriesData.videos) {
+            for (var j = 0; j < currentSeriesData.videos.length; j++) {
+                var videoItem = document.createElement('div');
+                videoItem.className = 'video-item';
+                videoItem.innerHTML = '<h2>Video ' + (j + 1) + '</h2>' +
+                    '<div class="video-description">' + currentSeriesData.videos[j].description + '</div>' +
+                    '<iframe width="300" height="169" src="' + currentSeriesData.videos[j].url + '" ' +
+                    'title="YouTube video player" frameborder="0" ' +
+                    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                videosContainer.appendChild(videoItem);
+            }
         }
     }
 });
-
